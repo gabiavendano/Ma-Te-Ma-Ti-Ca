@@ -1,0 +1,102 @@
+//introducción
+
+/*Desarrollar un menú (preferentemente usemos SWITCH)*/
+
+/*IMPORTANTE CAPAZ QUE NOS SIRVAN LOS ARRAYS*/
+
+/*Sucesion Aritmetica OP1*/
+/* - Permitir ingresar datos al usuario (solo puedan ser numeros (valor int))*/
+/* - Ingrese el numero (a1), diferencia (d(n-1)) y la posicion del valor de la sucesion (a84)*/
+/* - Calcular la sucesion y devolver el valor de la posicion seleccionada (a84) */
+/* - Determinar si es creciente (ESTRICTO O NO), decreciente (ESTRICTO O NO), constante o alternante*/
+/* - Preguntar si el usuario quiere ver la sucesion entera*/
+
+/*Sucesion Geometrica OP2*/
+/* - Permitir ingresar datos al usuario (solo puedan ser numeros (valor int))*/
+/* - Ingrese el numero (a1), razon(r * n-1) y la posicion del valor de la sucesion (a84)*/
+/* - Calcular la sucesion y devolver el valor de la posicion seleccionada (a84) */
+/* - Determinar si es creciente, decreciente, constante o alternante*/
+/* - Preguntar si el usuario quiere ver la sucesion entera*/
+
+/*Consolenator (Adivina Adivinador, conjunto dde datos aleatorios) OP3*/
+/* - Decir que el usuario ingrese minimo 3 valores si no ingresalos 3 no realizar el programa*/
+/* - Realizar los dos caminos (Aritmetica y Geometrica) en el que mas valores coincida es la correcta*/
+/* - Si no coinciden x elementos de las sucesiones imprimir mensaje diciendo "No es una sucesion"*/
+/* - Determinar si es creciente, decreciente, constante o alternante*/
+
+
+/*Salir :) OP4*/
+
+int opcion;
+bool salir = false;
+
+while (salir != true)
+{   
+    Console.Clear();
+    Console.WriteLine("Hola! bienvenido al MEJOR PROGRAMA DE SUCESIONES CON LOS PI, por favor seleccione una de las opciones.");
+    Console.WriteLine("Menú:");
+    Console.WriteLine("1. Sucesión Aritmética");
+    Console.WriteLine("2. Sucesión Geométrica");
+    Console.WriteLine("3. Console-inador"); /*Conjunto de datos*/
+    Console.WriteLine("4. Salir");
+    Console.Write("Seleccione una opción: ");
+
+    opcion = Convert.ToInt32(Console.ReadLine());
+    switch (opcion)
+    {
+        case 1:
+            {
+                Console.Clear();
+                Console.WriteLine("Bienvenido a la Sucesion Aritmetica.");
+                Console.WriteLine("Seleccione una de las 2 Opciones por favor.");
+                Console.WriteLine("1. Calcular el valor de posicion de la Sucesion.");
+                Console.WriteLine("2. Calcular la diferencia de la sucesion ingresada.");
+                int op = Convert.ToInt32(Console.ReadLine());
+                if (op == 1) // Funcionando.
+                {
+                    Console.WriteLine("Ingrese término, la diferencia y la cantidad de términos que desee obtener");
+                    Console.ReadLine();
+                    break;
+                }
+
+                if (op == 2) // funcionando.
+                {
+                    Console.WriteLine("Ingrese el conjunto de terminos y le calculamos la diferencia");
+                    Console.ReadLine();
+                    break;
+                }
+                else // funcionando.
+                    Console.WriteLine("seleccione alguna opcion por favor, sera redireccionado al menú principal");
+                    Console.ReadLine(); // ver como volver al if de arriba.
+                break;
+            }
+        case 2:
+            {
+                Console.WriteLine("Bienvenido a la Sucesion Geometrica");
+                Console.ReadLine();
+                break;
+            }
+        case 3:
+            {
+                Console.WriteLine("Bienvenido al Aivina Adivinador, con los numeros que usted ingrese veremos si es sucesion");
+                Console.ReadLine();
+                break;
+            }
+        case 4:
+            {
+                Console.WriteLine("Hasta Luego Mano Manito");
+                salir = true;
+                break;
+            }
+        default:
+            {
+                Console.WriteLine("OPCION INCORRECTA");
+                Console.ReadLine();
+                break;
+            }
+
+    }
+
+
+
+}
